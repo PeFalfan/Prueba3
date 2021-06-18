@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrega Vehiculo</title>
+</head>
+<body>
+    {% block content %}
+        <h1>Agregando Vehiculo</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{formularioVehiculo.error}}
+            {{formularioVehiculo.none_field_error}}
+            {{formularioVehiculo.as_p}}
+            <button type="submit">
+                Registrar
+            </button>
+        </form> {% endblock %}
+</body>
+</html>

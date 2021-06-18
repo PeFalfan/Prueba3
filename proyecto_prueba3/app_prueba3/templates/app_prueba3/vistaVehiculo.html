@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Automotora</title>
+  </head>
+  <body>
+    <!-- Tabla -->
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">VIN</th>
+          <th scope="col">PATENTE</th>
+          <th scope="col">AÑO DE FABRICACION</th>
+          <th scope="col">FECHA DE RECEPCION</th>
+          <th scope="col">MARCA</th>
+          <th scope="col">MODELO</th>
+          <th scope="col">ACCION</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for vehiculo in vehiculos %}
+        <tr>
+          <td>{{vehiculo.vin}}</td>
+          <td>{{vehiculo.patente}}</td>
+          <td>{{vehiculo.anio_fabricacion}}</td>
+          <td>{{vehiculo.fecha_recepcion}}</td>
+          <td>{{vehiculo.marca}}</td>
+          <td>{{vehiculo.modelo}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <a href="/proyecto_prueba3/app_prueba3/templates/app_prueba3/nuevoVehiculo.html" target="_blank">
+      <button type="button" class="btn btn-success mr-sm-2">Agregar</button>
+    </a>
+  </body>
+</html>
